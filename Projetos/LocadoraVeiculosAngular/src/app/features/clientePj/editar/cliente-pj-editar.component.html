@@ -1,0 +1,45 @@
+<div class="container main-container">
+    <h4>Cadastrar Cliente CNPJ</h4>
+    <hr />
+    <form novalidate [formGroup]="cadastroForm" (ngSubmit)='atualizarClientePj()'>
+        <div clas="form-group">
+            <label class="col-md-2 control-label" for="id">Id</label>
+            <div class="col-md-10">
+                <input class="form-control" id="id" type="text" placeholder="Id (requerido)" readonly
+                    formControlName="id" />
+            </div>
+            <label class="col-md-2 control-label" for="nome">Nome</label>
+            <div class="col-md-10">
+                <input class="form-control" id="nome" type="text" placeholder="Nome (requerido)"
+                    formControlName="nome" />
+            </div>
+            <label class="col-md-2 control-label" for="endereco">Endereço</label>
+            <div class="col-md-10">
+                <input class="form-control" id="endereco" type="text" placeholder="Endereço (requerido)"
+                    formControlName="endereco" />
+            </div>
+            <label class="col-md-2 control-label" for="telefone">Telefone</label>
+            <div class="col-md-10">
+                <input class="form-control" id="telefone" type="text" placeholder="Telefone (requerido)"
+                    formControlName="telefone" />
+            </div>
+            <label class="col-md-2 control-label" for="cnpj">CNPJ</label>
+            <div class="col-md-10">
+                <input class="form-control" id="cnpj" type="text" placeholder="CNPJ (requerido)"
+                    formControlName="cnpj" />
+            </div>
+            <label class="col-md-2 control-label" for="email">E-Mail</label>
+            <div class="col-md-10">
+                <input class="form-control" id="email" type="text" placeholder="E-Mail (requerido)"
+                    formControlName="email" />
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <div class="col-md-4 col-md-offset-2">
+                <span><button class="btn btn-success" id="registrar" type="submit">Registrar</button></span>
+                <span><button class="btn btn-danger" id="cancelar" (click)="cancelar()">Cancelar</button></span>
+            </div>
+        </div>
+    </form>
+</div>

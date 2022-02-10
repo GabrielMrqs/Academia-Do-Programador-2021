@@ -1,0 +1,62 @@
+<div class="sidebar-container">
+    <ul class="sidebar-navigation">
+        <li>
+            <a [routerLink]="['/home']">
+                <i class="fa fa-home" aria-hidden="true"></i> Home
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="['/parceiro/listar']">
+                <i class="fas fa-handshake" aria-hidden="true"></i> Parceiros
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="['/cupom/listar']">
+                <i class="fas fa-ticket-alt" aria-hidden="true"></i> Cupons
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="['/funcionario/listar']">
+                <i class="fas fa-address-card" aria-hidden="true"></i> Funcionários
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="['/servico/listar']">
+                <i class="fas fa-briefcase" aria-hidden="true"></i> Serviços
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="['/grupoVeiculo/listar']">
+                <i class="fas fa-object-group" aria-hidden="true"></i> Grupos de Veículo
+            </a>
+        </li>     
+        <li>
+            <a [routerLink]="['/veiculo/listar']">
+                <i class="fas fa-car" aria-hidden="true"></i> Veículos
+            </a>
+        </li>        
+        <li>
+            <a [routerLink]="['/clientePj/listar']">
+                <i class="fas fa-user-tie" aria-hidden="true"></i> Clientes CNPJ
+            </a>
+        </li>        
+        <li>
+            <a [routerLink]="['/clientePf/listar']">
+                <i class="fas fa-user-alt" aria-hidden="true"></i> Clientes CPF
+            </a>
+        </li>        
+        <li>
+            <a [routerLink]="['/locacao/listar']">
+                <i class="fas fa-car-side" aria-hidden="true"></i> Locações
+            </a>
+        </li>        
+    </ul>
+</div>
+
+<div class="content-container">
+    <div class="container-fluid">
+
+        <router-outlet></router-outlet>
+
+    </div>
+</div>

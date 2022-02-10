@@ -1,0 +1,54 @@
+<div class="container main-container">
+    <h4>Lista Serviços</h4>
+    <hr />
+    <div style="float: right;">
+        <button class="btn btn-dark" [routerLink]="['/servico/criar']">Cadastrar</button>
+        <button class="btn btn-dark" [routerLink]="['/servico/editar', servicoSelecionado]"
+            [disabled]="!servicoSelecionado">Editar</button>
+        <button class="btn btn-dark" (click)="abrirConfirmacao(modalExclusao)"
+            [disabled]="!servicoSelecionado">Excluir</button>
+    </div>
+    <br>
+    <br>
+    <table class="table table-striped" data-click-to-select="true">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Id</th>
+                <th scope="col">Nome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let servico of listaServicos">
+                <td>
+                    <div class="custom-control">
+                        <input type="radio" name="flexRadioDefault" class="custom-control-input" id="customRadio"
+                            value="{{ servico.id }}" [(ngModel)]="servicoSelecionado">
+                    </div>
+                </td>
+                <td>{{ servico.id }}</td>
+                <td>{{ servico.nome }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="d-flex justify-content-between p-2">
+        <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize"
+            (pageChange)="atualizarServicos()">
+        </ngb-pagination>
+    </div>
+
+</div>
+
+<ng-template #modalExclusao let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Excluir Serviço</h4>
+    </div>
+    <div class="modal-body">
+        Deseja realmente excluir esse Serviço?
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" (click)="modal.close('Excluir')">Excluir</button>
+        <button type="button" class="btn btn-secondary" (click)="modal.close('Cancelar')">Cancelar</button>
+    </div>
+</ng-template>

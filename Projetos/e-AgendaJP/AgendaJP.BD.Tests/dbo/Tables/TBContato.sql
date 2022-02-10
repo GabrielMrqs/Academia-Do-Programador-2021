@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[TBContato] (
+    [ID]       INT          IDENTITY (1, 1) NOT NULL,
+    [NOME]     VARCHAR (50) NOT NULL,
+    [EMAIL]    VARCHAR (50) NOT NULL,
+    [TELEFONE] VARCHAR (50) NOT NULL,
+    [EMPRESA]  VARCHAR (50) NOT NULL,
+    [CARGO]    VARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+

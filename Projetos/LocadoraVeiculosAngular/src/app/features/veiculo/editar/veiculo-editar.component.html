@@ -1,0 +1,99 @@
+<div class="container main-container">
+    <h4>Editar Veículo</h4>
+    <hr />
+    <form novalidate [formGroup]="cadastroForm" (ngSubmit)='atualizarVeiculo()'>
+        <div clas="form-group">
+            <label class="col-md-2 control-label" for="id">Id</label>
+            <div class="col-md-10">
+                <input class="form-control" id="id" type="text" readonly formControlName="id" />
+            </div>
+            <label class="col-md-2 control-label" for="nome">Nome</label>
+            <div class="col-md-10">
+                <input class="form-control" id="nome" type="text" placeholder="Nome (requerido)"
+                    formControlName="nome" />
+            </div>
+            <label class="col-md-2 control-label" for="numeroPlaca">Nº Placa</label>
+            <div class="col-md-10">
+                <input class="form-control" id="numeroPlaca" type="text" placeholder="Nº Placa (requerido)"
+                    formControlName="numeroPlaca" />
+            </div>
+            <label class="col-md-2 control-label" for="numeroChassi">Nº Chassi</label>
+            <div class="col-md-10">
+                <input class="form-control" id="numeroChassi" type="text" placeholder="Nº Chassi (requerido)"
+                    formControlName="numeroChassi" />
+            </div>
+            <label class="col-md-2 control-label" for="foto">Foto</label>
+            <div class="col-md-10">
+                <input class="form-control" id="foto" type="text" placeholder="Foto (requerido)"
+                    formControlName="foto" />
+            </div>
+            <label class="col-md-2 control-label" for="cor">Cor</label>
+            <div class="col-md-10">
+                <input class="form-control" id="cor" type="text" placeholder="Cor (requerido)" formControlName="cor" />
+            </div>
+            <label class="col-md-2 control-label" for="marca">Marca</label>
+            <div class="col-md-10">
+                <input class="form-control" id="marca" type="text" placeholder="Marca (requerido)"
+                    formControlName="marca" />
+            </div>
+            <label class="col-md-2 control-label" for="ano">Ano</label>
+            <div class="col-md-10">
+                <input class="form-control" id="ano" type="text" placeholder="Ano (requerido)" formControlName="ano" />
+            </div>
+            <label class="col-md-2 control-label" for="numeroPortas">Nº Portas</label>
+            <div class="col-md-10">
+                <input class="form-control" id="numeroPortas" type="text" placeholder="Nº Portas (requerido)"
+                    formControlName="numeroPortas" />
+            </div>
+            <label class="col-md-2 control-label" for="capacidadeTanque">Capacidade do Tanque</label>
+            <div class="col-md-10">
+                <input class="form-control" id="capacidadeTanque" type="text"
+                    placeholder="Capacidade do Tanque (requerido)" formControlName="capacidadeTanque" />
+            </div>
+            <label class="col-md-2 control-label" for="capacidadePessoas">Capacidade de Pessoas</label>
+            <div class="col-md-10">
+                <input class="form-control" id="capacidadePessoas" type="text"
+                    placeholder="Capacidade de Pessoas (requerido)" formControlName="capacidadePessoas" />
+            </div>
+            <label class="col-md-2 control-label" for="tamanhoPortaMalas">Tamanho Porta Malas</label>
+            <div class="col-md-10">
+                <select class="form-control" id="tamanhoPortaMalas" formControlName="tamanhoPortaMalas">
+                    <option value="">Selecione um Tamanho de Porta Malas</option>
+                    <option value="1">P</option>
+                    <option value="1">M</option>
+                    <option value="2">G</option>
+                </select>
+            </div>
+            <label class="col-md-2 control-label" for="kmInicial">Quilometragem</label>
+            <div class="col-md-10">
+                <input class="form-control" id="kmInicial" type="text" placeholder="Quilometragem (requerido)"
+                    formControlName="kmInicial" />
+            </div>
+            <label class="col-md-2 control-label" for="tipoCombustivel">Tipo de Combustível</label>
+            <div class="col-md-10">
+                <select class="form-control" id="tipoCombustivel" formControlName="tipoCombustivel">
+                    <option value="">Selecione um Tipo de Combustível</option>
+                    <option value="1">Gasolina</option>
+                    <option value="1">Diesel</option>
+                    <option value="2">Álcool</option>
+                </select>
+            </div>
+            <label class="col-md-2 control-label" for="grupo">Grupo Veículo</label>
+            <div class="col-md-10">
+                <select class="form-control" id="idGrupoVeiculo" formControlName="idGrupoVeiculo">
+                    <option value="">Selecione um Grupo Veículo</option>
+                    <option *ngFor="let grupo of listaGruposVeiculo" value={{grupo.id}}>
+                        {{grupo.nomeTipo}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <div class="col-md-4 col-md-offset-2">
+                <span><button class="btn btn-success" id="registrar" type="submit">Registrar</button></span>
+                <span><button class="btn btn-danger" id="cancelar" (click)="cancelar()">Cancelar</button></span>
+            </div>
+        </div>
+    </form>
+</div>

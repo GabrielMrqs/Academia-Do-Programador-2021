@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[TBTarefa] (
+    [ID]            INT          IDENTITY (1, 1) NOT NULL,
+    [TITULO]        VARCHAR (50) NOT NULL,
+    [PRIORIDADE]    VARCHAR (50) NOT NULL,
+    [DATACRIACAO]   DATETIME     NOT NULL,
+    [DATACONCLUSAO] DATETIME     NOT NULL,
+    [PERCENTUAL]    INT          NOT NULL,
+    PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+

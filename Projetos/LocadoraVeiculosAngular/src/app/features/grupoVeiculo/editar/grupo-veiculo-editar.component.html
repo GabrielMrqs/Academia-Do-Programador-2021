@@ -1,0 +1,50 @@
+<div class="container main-container">
+    <h4>Cadastrar Cupom</h4>
+    <hr />
+    <form novalidate [formGroup]="cadastroForm" (ngSubmit)='atualizarGrupoVeiculo()'>
+        <div clas="form-group">
+            <label class="col-md-4 control-label" for="nomeTipo">Nome</label>
+            <div class="col-md-10">
+                <input class="form-control" id="nomeTipo" type="text" placeholder="Nome (requerido)"
+                    formControlName="nomeTipo" />
+            </div>
+            <label class="col-md-4 control-label" for="valorDiarioPDiario">Valor Diária / Plano Diário</label>
+            <div class="col-md-10">
+                <input class="form-control" id="valorDiarioPDiario" type="text" placeholder="Valor Diário / Plano Diário (requerido)"
+                    formControlName="valorDiarioPDiario" />
+            </div>
+            <label class="col-md-4 control-label" for="valorKmRodadoPDiario">Valor KM Rodado / Plano Diário</label>
+            <div class="col-md-10">
+                <input class="form-control" id="valorKmRodadoPDiario" type="text" placeholder="Valor Km Rodado / Plano Diário (requerido)"
+                    formControlName="valorKmRodadoPDiario" />
+            </div>
+            <label class="col-md-4 control-label" for="valorDiarioPControlado">Valor Diária / Plano Controlado</label>
+            <div class="col-md-10">
+                <input class="form-control" id="valorDiarioPControlado" type="text" placeholder="Valor Diária / Plano Controlado (requerido)"
+                    formControlName="valorDiarioPControlado" />
+            </div>
+            <label class="col-md-4 control-label" for="valorKmRodadoPControlado">Valor KM Rodado / Plano Controlado</label>
+            <div class="col-md-10">
+                <input class="form-control" id="valorKmRodadoPControlado" type="text" placeholder="Valor Km Rodado / Plano Controlado (requerido)"
+                    formControlName="valorKmRodadoPControlado" />
+            </div>
+            <label class="col-md-4 control-label" for="limitePControlado">Limite KM / Plano Controlado</label>
+            <div class="col-md-10">
+                <input class="form-control" id="limitePControlado" type="text" placeholder="Limite KM / Plano Controlado (requerido)"
+                    formControlName="limitePControlado" />
+            </div>
+            <label class="col-md-4 control-label" for="valorDiarioPLivre">Valor Diária / Plano Livre</label>
+            <div class="col-md-10">
+                <input class="form-control" id="valorDiarioPLivre" type="text" placeholder="Valor Diária / Plano Livre (requerido)"
+                    formControlName="valorDiarioPLivre" />
+            </div>        
+        </div>
+        <br>
+        <div class="form-group">
+            <div class="col-md-4 col-md-offset-2">
+                <span><button class="btn btn-success" id="registrar" type="submit">Registrar</button></span>
+                <span><button class="btn btn-danger" id="cancelar" (click)="cancelar()">Cancelar</button></span>
+            </div>
+        </div>
+    </form>
+</div>

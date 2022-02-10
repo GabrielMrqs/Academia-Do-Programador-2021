@@ -1,0 +1,39 @@
+<div class="container main-container">
+    <h4>Cadastrar Serviço</h4>
+    <hr />
+    <form novalidate [formGroup]="cadastroForm" (ngSubmit)='atualizarServico()'>
+        <div clas="form-group">
+            <label class="col-md-2 control-label" for="id">Id</label>
+            <div class="col-md-10">
+                <input class="form-control" id="id" type="text" readonly placeholder="Id (requerido)"
+                    formControlName="id" />
+            </div>
+            <label class="col-md-2 control-label" for="nome">Nome</label>
+            <div class="col-md-10">
+                <input class="form-control" id="nome" type="text" placeholder="Nome (requerido)"
+                    formControlName="nome" />
+            </div>
+            <label class="col-md-2 control-label" for="preco">Salário</label>
+            <div class="col-md-10">
+                <input class="form-control" id="preco" type="text" placeholder="Preço (requerido)"
+                    formControlName="preco" />
+            </div>
+            <label class="col-md-2 control-label" for="calculoTipo">Tipo Cupom</label>
+            <div class="col-md-10">
+                <select class="form-control" id="calculoTipo" formControlName="calculoTipo">
+                    <option value="">Selecione um Tipo</option>
+                    <option *ngFor="let chave of chaves" value={{chave}}>
+                        {{tipos[chave]}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <div class="col-md-4 col-md-offset-2">
+                <span><button class="btn btn-success" id="registrar" type="submit">Registrar</button></span>
+                <span><button class="btn btn-danger" id="cancelar" (click)="cancelar()">Cancelar</button></span>
+            </div>
+        </div>
+    </form>
+</div>
